@@ -1,0 +1,20 @@
+{
+	"name": "instruction",
+	"plugin-id": "Text",
+	"sid": 664204238823191,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Fade",
+			"name": "Fade",
+			"sid": 117991108482136
+		},
+		{
+			"behaviorId": "Flash",
+			"name": "Flash",
+			"sid": 341598992486541
+		}
+	],
+	"effectTypes": []
+}

@@ -1,0 +1,32 @@
+{
+	"name": "darkStage",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Player"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 981031123934992
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 561590186526615,
+					"parameters": {
+						"x": "chipChip.X",
+						"y": "chipChip.Y"
+					}
+				}
+			],
+			"sid": 498423513348727
+		}
+	],
+	"sid": 919884289430299
+}

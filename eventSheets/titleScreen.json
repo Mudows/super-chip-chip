@@ -1,0 +1,159 @@
+{
+	"name": "titleScreen",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 561607675066727
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 612457623355529,
+					"parameters": {
+						"audio-file": "mainScreen",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"mainScreen\""
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 570663568466832,
+					"parameters": {
+						"tag": "\"dukeNukem\""
+					}
+				}
+			],
+			"sid": 765124666636368
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 884829710097161,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "curtain",
+					"sid": 855132882082027,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "curtain",
+					"sid": 381792905928367,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "2"
+					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "curtain",
+					"sid": 436252428066549,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 335069233049308,
+					"parameters": {
+						"audio-file": "taunt3",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "flash",
+					"objectClass": "instruction",
+					"sid": 937641305893499,
+					"behaviorType": "Flash",
+					"parameters": {
+						"on-time": "0.1",
+						"off-time": "0.1",
+						"duration": "2.0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 983204804371315,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 762146514242733,
+					"parameters": {
+						"layout": "Stage1"
+					}
+				}
+			],
+			"sid": 485948196875426
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-end-of-layout",
+					"objectClass": "System",
+					"sid": 452503504816965
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 960848617007014,
+					"parameters": {
+						"tag": "\"mainScreen\""
+					}
+				}
+			],
+			"sid": 465278282722663
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-fade-out-finished",
+					"objectClass": "instruction",
+					"sid": 825264013130526,
+					"behaviorType": "Fade"
+				}
+			],
+			"actions": [
+				{
+					"id": "restart-fade",
+					"objectClass": "instruction",
+					"sid": 226239201148852,
+					"behaviorType": "Fade"
+				}
+			],
+			"sid": 312624998053311
+		}
+	],
+	"sid": 381569111298852
+}

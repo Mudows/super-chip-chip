@@ -1,0 +1,43 @@
+{
+	"name": "Globals",
+	"plugin-id": "Globals",
+	"sid": 663885162818843,
+	"isGlobal": true,
+	"instanceVariables": [
+		{
+			"name": "currPlayerAnimation",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 444590332263459
+		},
+		{
+			"name": "nEnemies",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 354907565678759
+		},
+		{
+			"name": "randomNumber",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 546754677080518
+		},
+		{
+			"name": "creditsSurvival",
+			"type": "boolean",
+			"desc": "",
+			"show": true,
+			"sid": 618446289564004
+		},
+		{
+			"name": "onDeathLayout",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 473009344326772
+		}
+	]
+}

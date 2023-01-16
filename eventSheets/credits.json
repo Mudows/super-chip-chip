@@ -1,0 +1,630 @@
+{
+	"name": "credits",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "timeToKill",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 143221719896500
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Player"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "everyTick"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 937656445239707
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 766111489528662,
+					"parameters": {
+						"tag": "\"bee\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 381734718512845,
+					"parameters": {
+						"audio-file": "mainScreen",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"credit-theme\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Globals",
+					"sid": 513083546147048,
+					"parameters": {
+						"instance-variable": "currPlayerAnimation",
+						"value": "\"walk\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "chipChip",
+					"sid": 784074403853118,
+					"parameters": {
+						"animation": "\"walk\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 740793102377174,
+					"parameters": {
+						"group-name": "\"Pick Ups\"",
+						"state": "deactivated"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Globals",
+					"sid": 977347884109404,
+					"parameters": {
+						"instance-variable": "onDeathLayout",
+						"value": "\"titleScreen\""
+					}
+				}
+			],
+			"sid": 616064804426339,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "furiaChipChip",
+							"sid": 587482031822157,
+							"parameters": {
+								"unique-id": "36"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-progress",
+							"objectClass": "furiaChipChip",
+							"sid": 493271920581868,
+							"parameters": {
+								"value": "chipChip.vida"
+							}
+						},
+						{
+							"id": "set-css-style",
+							"objectClass": "furiaChipChip",
+							"sid": 276742548239103,
+							"parameters": {
+								"property-name": "\"border\"",
+								"value": "\"2px solid black\""
+							}
+						}
+					],
+					"sid": 710390791166839
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "furiaChipChip",
+							"sid": 933272019114897,
+							"parameters": {
+								"unique-id": "37"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-progress",
+							"objectClass": "furiaChipChip",
+							"sid": 217365053988279,
+							"parameters": {
+								"value": "chipChip.furia"
+							}
+						}
+					],
+					"sid": 743123546938240
+				}
+			]
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Survival Mode",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "chipChip",
+							"sid": 938052956441330,
+							"parameters": {
+								"object": "gun"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "gun",
+							"sid": 118096808253816
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 472286334616637,
+							"parameters": {
+								"audio-file": "pickup-gun",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"pickup-gun\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Globals",
+							"sid": 430920377432795,
+							"parameters": {
+								"instance-variable": "currPlayerAnimation",
+								"value": "\"walk-armed\""
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "chipChip",
+							"sid": 500467472464839,
+							"parameters": {
+								"animation": "\"walk-armed\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "fade-volume",
+							"objectClass": "Audio",
+							"sid": 948702919045913,
+							"parameters": {
+								"tag": "\"credit-theme\"",
+								"db": "-100",
+								"duration": "5",
+								"ending": "stop"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 992323082195348,
+							"parameters": {
+								"seconds": "5"
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 881300440314368,
+							"parameters": {
+								"audio-file": "dukeNukem",
+								"loop": "looping",
+								"volume": "0",
+								"stereo-pan": "0",
+								"tag-optional": "\"dukeNukem\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 736728034536426,
+							"parameters": {
+								"seconds": "3"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Globals",
+							"sid": 201427668060552,
+							"parameters": {
+								"instance-variable": "creditsSurvival",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "furiaChipChip",
+							"sid": 220155782410781,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 417875863968028,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "credits",
+									"sid": 727499630195719,
+									"parameters": {
+										"unique-id": "29"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "typewriter-text",
+									"objectClass": "credits",
+									"sid": 866442733416683,
+									"parameters": {
+										"text": "\"AGORA MORRA!\"",
+										"duration": "2"
+									}
+								}
+							],
+							"sid": 962263526344357
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Globals",
+							"sid": 695251396255641,
+							"parameters": {
+								"instance-variable": "creditsSurvival"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 690427340326514,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-x-seconds",
+									"objectClass": "System",
+									"sid": 864433809728360,
+									"parameters": {
+										"interval-seconds": "1.0"
+									}
+								},
+								{
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 520528079178669,
+									"parameters": {
+										"object": "spawnpoint"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "spawn-another-object",
+									"objectClass": "spawnpoint",
+									"sid": 615303815504149,
+									"parameters": {
+										"object": "queenBee",
+										"layer": "\"main\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "queenBee",
+									"sid": 219981758022209,
+									"parameters": {
+										"instance-variable": "vida",
+										"value": "3"
+									}
+								},
+								{
+									"id": "set-magnitude",
+									"objectClass": "queenBee",
+									"sid": 493220862034845,
+									"behaviorType": "Sine",
+									"parameters": {
+										"magnitude": "50"
+									}
+								},
+								{
+									"id": "set-scale",
+									"objectClass": "queenBee",
+									"sid": 792466303378377,
+									"parameters": {
+										"scale": "random(0.1,1)"
+									}
+								}
+							],
+							"sid": 684898898759484
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 779295926110811
+								}
+							],
+							"actions": [
+								{
+									"id": "move-forward",
+									"objectClass": "queenBee",
+									"sid": 978707910132502,
+									"parameters": {
+										"distance": "queenBee.movSpeed"
+									}
+								}
+							],
+							"sid": 856512248675206
+						}
+					]
+				}
+			],
+			"sid": 620146747680937
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mecânicas do Chip-Chip",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "chipChip",
+							"sid": 786847597786651,
+							"parameters": {
+								"object": "queenBee"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "chipChip",
+							"sid": 515539308408587,
+							"parameters": {
+								"instance-variable": "vida",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 620923910611750,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "furiaChipChip",
+									"sid": 103307511879738,
+									"parameters": {
+										"unique-id": "36"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-progress",
+									"objectClass": "furiaChipChip",
+									"sid": 899287553482841,
+									"parameters": {
+										"value": "chipChip.vida"
+									}
+								}
+							],
+							"sid": 695388246713236
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "chipChip",
+									"sid": 225322968147047,
+									"parameters": {
+										"instance-variable": "vida",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "death",
+									"sid": 995823571204184
+								}
+							],
+							"sid": 371623137813636
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "bullet",
+							"sid": 828096800742481,
+							"parameters": {
+								"object": "queenBee"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "chipChip",
+							"sid": 775524342972586,
+							"parameters": {
+								"instance-variable": "furia",
+								"comparison": 2,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bullet",
+							"sid": 775895658330851
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "chipChip",
+							"sid": 794101008005949,
+							"parameters": {
+								"instance-variable": "furia",
+								"value": "0.5"
+							}
+						}
+					],
+					"sid": 580127029033061,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "furiaChipChip",
+									"sid": 596052675647938,
+									"parameters": {
+										"unique-id": "37"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-progress",
+									"objectClass": "furiaChipChip",
+									"sid": 415641663083310,
+									"parameters": {
+										"value": "chipChip.furia"
+									}
+								}
+							],
+							"sid": 151117090713838
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 381518292197392,
+							"parameters": {
+								"key": 82
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "chipChip",
+							"sid": 635024726121521,
+							"parameters": {
+								"instance-variable": "furia",
+								"comparison": 5,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Enemies",
+							"sid": 270686878383126
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "chipChip",
+							"sid": 740825112546326,
+							"parameters": {
+								"instance-variable": "furia",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 132613455629377,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "repeat",
+									"objectClass": "System",
+									"sid": 305416376078678,
+									"parameters": {
+										"count": "20"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "bombAnimation",
+									"sid": 275406581253464
+								}
+							],
+							"sid": 296918617983454
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "pick-by-unique-id",
+									"objectClass": "furiaChipChip",
+									"sid": 101693183789264,
+									"parameters": {
+										"unique-id": "37"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-progress",
+									"objectClass": "furiaChipChip",
+									"sid": 160083403805950,
+									"parameters": {
+										"value": "chipChip.furia"
+									}
+								}
+							],
+							"sid": 215738752104094
+						}
+					]
+				}
+			],
+			"sid": 360679193543262
+		}
+	],
+	"sid": 206453098170820
+}

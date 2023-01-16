@@ -1,0 +1,152 @@
+{
+	"name": "everyTick",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Eventos que precisam ser observados e/ou atualizados constantemente."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 231454963754503
+				}
+			],
+			"actions": [],
+			"sid": 436638665352033,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "enemeigo1",
+							"sid": 814139940064727,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "chipChip.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemeigo1",
+							"sid": 895620826415924,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 514247083172302
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "enemeigo1",
+							"sid": 674290463613312,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "chipChip.X"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemeigo1",
+							"sid": 246545119765349,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 444512913623375
+				},
+				{
+					"eventType": "variable",
+					"name": "xModifier",
+					"type": "number",
+					"initialValue": "15",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": true,
+					"sid": 384027434670051
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "queenBee",
+							"sid": 108361333239278,
+							"parameters": {
+								"comparison": 3,
+								"x-co-ordinate": "chipChip.X - xModifier"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "queenBee",
+							"sid": 799850406134836,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "queenBee",
+							"sid": 393247232004543,
+							"parameters": {
+								"instance-variable": "movSpeed",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 387935308118011
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "queenBee",
+							"sid": 746972060207056,
+							"parameters": {
+								"comparison": 4,
+								"x-co-ordinate": "chipChip.X + xModifier"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "queenBee",
+							"sid": 700155332877778,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "queenBee",
+							"sid": 757463454872846,
+							"parameters": {
+								"instance-variable": "movSpeed",
+								"value": "-1"
+							}
+						}
+					],
+					"sid": 142543011027352
+				}
+			]
+		}
+	],
+	"sid": 242034737825073
+}

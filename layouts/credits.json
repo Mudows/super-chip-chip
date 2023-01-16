@@ -1,0 +1,674 @@
+{
+	"name": "credits",
+	"layers": [
+		{
+			"name": "bg",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "blueSky",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 25,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"ownData": {
+						"tilemapData": {
+							"width": 20,
+							"height": 45,
+							"max-width": 54,
+							"max-height": 71,
+							"data": "9x1,13x15,2x0,39,50,49,60,6,25,0,2,10x0,5,28x0,9x1,13x15,6x0,35,5,0,3,10x0,5,28x0,2,2x1,2x15,4x1,12,10x15,2,15,6x0,33,6,25,7x0,12,2x0,34,5,28x0,3,2x1,2x15,4x1,11x15,3,15,7x0,34,29,8x0,39,49,59,5,28x0,3x1,2x15,39,49,58,4,14,17,11x15,8x0,12,11x0,5,28x0,4x1,3x15,1,5,3x15,12,9x15,3x0,13,3x0,33,28,11x0,5,28x0,2x1,12,1,3x15,32,5,13x15,7x0,33,5,3x0,2,6x0,35,5,28x0,4x1,4x15,6,16,27,10x15,13,7x0,33,5,3x0,3,7x0,5,28x0,3x1,2x15,13,4x15,5,6x15,12,3x15,3x1,5x0,33,5,11x0,5,28x0,13,2x1,2x15,3x1,2x15,5,11x15,7x0,33,5,11x0,5,28x0,3x1,2x15,3x1,15,34,6,19,10x15,2x0,2,1,39,40,50,58,5,13,10x0,5,28x0,3x1,15,4x1,10x15,36,28,1,15,2x0,3,4x0,33,5,10x0,31,5,28x0,1,3x15,5x1,9x15,35,5,2x15,7x0,33,5,4x0,13,6x0,5,28x0,1,2x15,2,5x1,3x15,2,4x15,39,58,6,27,15,7x0,33,5,10x0,36,5,28x0,3x1,3,4x1,4x15,3,3x15,39,48,49,59,5,15,7x0,33,5,11x0,5,28x0,6x1,15,1,11x15,1,5,15,7x0,33,5,11x0,5,28x0,6x1,13,1,15,3x1,7x15,34,29,15,7x0,33,5,2x0,2,5x0,39,49,59,5,28x0,2x1,13,5x1,10x15,13,2x15,2,3x0,39,59,4,2x14,26,2x0,3,8x0,5,28x0,8x1,4x15,1,15,2,6x15,3,3x0,34,4,26,3x0,12,9x0,32,5,28x0,8x1,6x15,3,7x15,2x0,32,4,24,15x0,5,28x0,3x1,28,3x1,2,5x15,4,17,7x15,49x0,1,2,1,6,25,2x1,3,2x15,39,49,58,5,8x15,49x0,1,3,1,35,6,25,2x1,5x15,5,8x15,49x0,5x1,6,25,1,15,39,48,50,59,5,8x15,49x0,6x1,5,1,12,4x15,5,8x15,49x0,2x1,28,3x1,5,1,4x15,35,5,8x15,49x0,1,35,5,3x1,5,1,5x15,6,19,7x15,49x0,2x1,5,39,49,59,5,1,15,2,12x15,49x0,1,33,5,3x1,5,1,15,3,2x15,4,17,8x15,49x0,2x1,5,2x1,36,5,1,2x15,39,59,5,9x15,49x0,1,34,5,13,2x1,5,1,3x15,33,5,9x15,49x0,1,36,5,3x1,6,16,19,3x15,5,9x15,49x0,2x1,5,5x1,3x15,4,24,9x15,49x0,1,33,5,5x1,39,49,59,5,10x15,49x0,2x1,6,19,15,3x1,28,2x15,5,10x15,49x0,4x1,15,2x1,32,29,15,32,5,10x15,49x0,3x1,36,28,2,2x1,3x15,5,10x15,49x0,1,39,49,59,5,3,2x1,3x15,6,2x16,19,7x15,49x0,4x1,5,3x1,15,28,12x15,49x0,4x1,5,3x1,33,29,12x15,49x0,1,13,2x1,5,1,12,1,14x15,49x0,4x1,6,16,19,1,14x15,49x0,8x1,14x15,49x0,8x1,14x15,49x0,1,2,5x1,2,14x15,49x0,1,3,5x1,3,14x15,49x0,8x1,14x15,49x0,8x1,14x15,49x0,8x1,14x15,49x0,8x1,14x15,49x0,8x1,14x15,49x0,8x1,14x15,49x0,8x1,14x15,49x0,22x15,49x0"
+						},
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 720,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 937444127811980,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.8313725490196079,
+				0.9019607843137255,
+				0.9254901960784314,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "interface",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "furiaChipChip",
+					"properties": {
+						"value": 0,
+						"maximum": 10,
+						"tooltip": "",
+						"initially-visible": false,
+						"id": "furyCC",
+						"class": ""
+					},
+					"uid": 37,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 176,
+						"y": 688,
+						"width": 128,
+						"height": 8,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "furiaChipChip",
+					"properties": {
+						"value": 10,
+						"maximum": 10,
+						"tooltip": "",
+						"initially-visible": false,
+						"id": "vidaCC",
+						"class": ""
+					},
+					"uid": 36,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 16,
+						"y": 688,
+						"width": 128,
+						"height": 8,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						]
+					}
+				},
+				{
+					"type": "credits",
+					"properties": {
+						"text": "Obrigado por jogar!",
+						"enable-bbcode": true,
+						"font": "PressStart2P-Regular",
+						"size": 10,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.9882352941176471,
+							0.40784313725490196,
+							0.23137254901960785,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 29,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 48,
+						"y": 592,
+						"width": 224,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "credits",
+					"properties": {
+						"text": "Assets Utilizados:\n      Kenney (Tileset)\n      Metal Slug (SFX)\n      Kingdom Rush (BGM)",
+						"enable-bbcode": true,
+						"font": "PressStart2P-Regular",
+						"size": 4,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.9882352941176471,
+							0.40784313725490196,
+							0.23137254901960785,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 27,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 32,
+						"y": 400,
+						"width": 128,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "credits",
+					"properties": {
+						"text": "Desenvolvedor:\n      Diego \"Mudows\" Cezar",
+						"enable-bbcode": true,
+						"font": "PressStart2P-Regular",
+						"size": 5,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.9882352941176471,
+							0.40784313725490196,
+							0.23137254901960785,
+							1
+						],
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 28,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 16,
+						"y": 240,
+						"width": 192,
+						"height": 32,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "credits",
+					"properties": {
+						"text": "Super Chip-Chip World\n- Créditos -",
+						"enable-bbcode": true,
+						"font": "PressStart2P-Regular",
+						"size": 10,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.9882352941176471,
+							0.40784313725490196,
+							0.23137254901960785,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 24,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 32,
+						"y": 48,
+						"width": 256,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Explosion",
+					"properties": {
+						"rate": 200,
+						"spray-cone": 360,
+						"type": "one-shot",
+						"object": -1,
+						"live-preview": false,
+						"speed": 50,
+						"size": 4,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -30,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
+					},
+					"uid": 38,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 368,
+						"y": 96,
+						"width": 100,
+						"height": 100,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 670613832722578,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "main",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "chipChip",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "walk",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 26,
+					"instanceVariables": {
+						"vida": 10,
+						"furia": 0
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 130,
+								"acceleration": 1200,
+								"deceleration": 1200,
+								"jump-strength": 325,
+								"gravity": 1500,
+								"max-fall-speed": 250,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 112,
+						"y": 119,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "gun",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 30,
+					"instanceVariables": {},
+					"behaviors": {
+						"Sine": {
+							"properties": {
+								"movement": "vertical",
+								"wave": "sine",
+								"period": 4,
+								"period-random": 0,
+								"period-offset": 0,
+								"period-offset-random": 0,
+								"magnitude": 5,
+								"magnitude-random": 0,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 160,
+						"y": 656,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spawnpoint",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 31,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 320,
+						"y": 656,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "spawnpoint",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": false,
+						"live-preview": false
+					},
+					"uid": 32,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 0,
+						"y": 656,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 235390616058376,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "cortina",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "curtain",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 34,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 0.5,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 778501794326065,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 165965650775694,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 320,
+	"height": 720,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "credits"
+}

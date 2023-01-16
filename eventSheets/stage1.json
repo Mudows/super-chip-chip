@@ -1,0 +1,108 @@
+{
+	"name": "stage1",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "Player"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "Enemies"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "everyTick"
+		},
+		{
+			"eventType": "comment",
+			"text": "Eventos que iniciam com o layout"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 434300280687865
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 454730175970409,
+					"parameters": {
+						"audio-file": "stage",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"bgm-stage\""
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "queenBee",
+					"sid": 368391886408340,
+					"parameters": {
+						"state": "mirrored"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 445349445011025,
+					"parameters": {
+						"tag": "\"bee\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Globals",
+					"sid": 610691255892626,
+					"parameters": {
+						"instance-variable": "currPlayerAnimation",
+						"value": "\"walk\""
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "Globals",
+					"sid": 133824980995110,
+					"parameters": {
+						"instance-variable": "onDeathLayout",
+						"value": "\"Stage1\""
+					}
+				}
+			],
+			"sid": 996065030012229,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-all",
+							"objectClass": "System",
+							"sid": 514845349625971,
+							"parameters": {
+								"object": "enemeigo1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Globals",
+							"sid": 453550190641965,
+							"parameters": {
+								"instance-variable": "nEnemies",
+								"value": "enemeigo1.PickedCount"
+							}
+						}
+					],
+					"sid": 560470029521168
+				}
+			]
+		}
+	],
+	"sid": 133936715270834
+}

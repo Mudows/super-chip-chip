@@ -1,0 +1,409 @@
+{
+	"name": "titleScreen",
+	"layers": [
+		{
+			"name": "background",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "blueSky",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 18,
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"ownData": {
+						"tilemapData": {
+							"width": 20,
+							"height": 12,
+							"max-width": 54,
+							"max-height": 23,
+							"data": "12x1,10x15,0,12x1,10x15,0,12x1,10x15,0,5x1,12,6x1,10x15,0,12x1,10x15,0,6x1,31,4,17,3x1,12,9x15,0,5x1,34,4,24,4x1,10x15,0,2x1,39,40,49,58,5,5x1,10x15,0,5x1,36,5,5x1,10x15,0,3x1,39,49,60,5,5x1,10x15,0,2x1,2,3x1,5,5x1,10x15,0,2x1,3,2x1,33,5,5x1,10x15,0,1,39,49,50,49,59,5,5x1,10x15,0,5x1,35,6,25,4x1,2,9x15,0,6x1,32,6,19,3x1,3,9x15,0,12x1,10x15,0,1,13,10x1,10x15,0,12x1,10x15,0,12x1,10,9x15,0,12x1,10x15,0,3x1,28,3x1,2,5x15,4,17,7x15,0,1,2,1,6,25,2x1,3,2x15,39,49,58,5,8x15,0,1,3,1,35,6,25,2x1,5x15,5,8x15,0,5x1,6,25,1,15,39,48,50,59,5,8x15,0,6x1,5,1,12,4x15,5,8x15,0,2x1,28,3x1,5,1,4x15,35,5,8x15,0,1,35,5,3x1,5,1,5x15,6,19,7x15,0,2x1,5,39,49,59,5,1,15,2,12x15,0,1,33,5,3x1,5,1,15,3,2x15,4,17,8x15,0,2x1,5,2x1,36,5,1,2x15,39,59,5,9x15,0,1,34,5,13,2x1,5,1,3x15,33,5,9x15,0,1,36,5,3x1,6,16,19,3x15,5,9x15,0,2x1,5,5x1,3x15,4,24,9x15,0,1,33,5,5x1,39,49,59,5,10x15,0,2x1,6,19,15,3x1,28,2x15,5,10x15,0,4x1,15,2x1,32,29,15,32,5,10x15,0,3x1,36,28,2,2x1,3x15,5,10x15,0,1,39,49,59,5,3,2x1,3x15,6,2x16,19,7x15,0,4x1,5,3x1,15,28,12x15,0,4x1,5,3x1,33,29,12x15,0,1,13,2x1,5,1,12,1,14x15,0,4x1,6,16,19,1,14x15,0,8x1,14x15,0,8x1,14x15,0,1,2,5x1,2,14x15,0,1,3,5x1,3,14x15,0,8x1,14x15,0,8x1,14x15,0,8x1,14x15,0,8x1,14x15,0,8x1,14x15,0,8x1,14x15,0,8x1,14x15,0,22x15,0"
+						},
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 192,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 714389993626093,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "main",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "chipChip",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "walk",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 23,
+					"instanceVariables": {
+						"vida": 10,
+						"furia": 0
+					},
+					"behaviors": {
+						"Platform": {
+							"properties": {
+								"max-speed": 130,
+								"acceleration": 1200,
+								"deceleration": 1200,
+								"jump-strength": 325,
+								"gravity": 1500,
+								"max-fall-speed": 250,
+								"double-jump": false,
+								"jump-sustain": 0,
+								"default-controls": false,
+								"enabled": false
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						},
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 167.86094846580272,
+						"y": 87.86094846580272,
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "instruction",
+					"properties": {
+						"text": "Aperte ESPAÇO para começar",
+						"enable-bbcode": true,
+						"font": "PressStart2P-Regular",
+						"size": 6,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.9882352941176471,
+							0.40784313725490196,
+							0.23137254901960785,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 20,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 1.5,
+								"wait-time": 0,
+								"fade-out-time": 1.5,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						},
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"world": {
+						"x": 96,
+						"y": 112,
+						"width": 128,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "title",
+					"properties": {
+						"text": "Super Chip-Chip World",
+						"enable-bbcode": true,
+						"font": "PressStart2P-Regular",
+						"size": 12,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0,
+							0,
+							0,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 35,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 49,
+						"y": 17,
+						"width": 224,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							0.5
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "title",
+					"properties": {
+						"text": "Super Chip-Chip World",
+						"enable-bbcode": true,
+						"font": "PressStart2P-Regular",
+						"size": 12,
+						"line-height": 0,
+						"bold": true,
+						"italic": false,
+						"color": [
+							0.9882352941176471,
+							0.40784313725490196,
+							0.23137254901960785,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 19,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 48,
+						"y": 16,
+						"width": 224,
+						"height": 64,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 152408948248005,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				1,
+				1,
+				1,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		},
+		{
+			"name": "cortina",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "curtain",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"instanceVariables": {},
+					"behaviors": {
+						"Fade": {
+							"properties": {
+								"fade-in-time": 0,
+								"wait-time": 0,
+								"fade-out-time": 2,
+								"destroy": false,
+								"enabled": true,
+								"live-preview": false
+							}
+						}
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 320,
+						"height": 180,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 178308418382880,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.5019607843137255,
+				0.5019607843137255,
+				0.5019607843137255,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 185438210475398,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 320,
+	"height": 180,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": "titleScreen"
+}

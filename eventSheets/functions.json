@@ -1,0 +1,148 @@
+{
+	"name": "functions",
+	"events": [
+		{
+			"functionName": "death",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 636074300615364,
+					"parameters": {
+						"audio-file": "scream",
+						"loop": "not-looping",
+						"volume": "-15",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-default-color",
+					"objectClass": "chipChip",
+					"sid": 750537871522868,
+					"parameters": {
+						"color": "rgbEx(255, 0, 0)"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "chipChip",
+					"sid": 706136029857050,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "chipChip",
+					"sid": 773216390617288,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "20",
+						"duration": "0.4",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 169144572184983,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "chipChip",
+					"sid": 916746118537295
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "curtain",
+					"sid": 444446218696396,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "curtain",
+					"sid": 378561151454722,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "0.5"
+					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "curtain",
+					"sid": 483373220089681,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 475935178722541,
+					"parameters": {
+						"seconds": "1.5"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 691103217526393,
+					"parameters": {
+						"layout": "Globals.onDeathLayout"
+					}
+				}
+			],
+			"sid": 386101251321737
+		},
+		{
+			"functionName": "bombAnimation",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionCopyPicked": false,
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 465710209434734,
+					"parameters": {
+						"seconds": "random(0.1,2)"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 622047579696419,
+					"parameters": {
+						"object-to-create": "Explosion",
+						"layer": "1",
+						"x": "random(0,320)",
+						"y": "random(550,720)",
+						"create-hierarchy": false,
+						"template-name": "\"explosion\""
+					}
+				}
+			],
+			"sid": 666032137937237
+		}
+	],
+	"sid": 701922796254408
+}

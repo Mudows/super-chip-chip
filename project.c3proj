@@ -1,0 +1,493 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 31702,
+	"name": "Chip-Chip World",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Globals",
+			"name": "Globals",
+			"author": "Toby R",
+			"version": "1.0.0.0",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Progress bar",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Bullet",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "bound",
+			"name": "Bound to layout",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fade",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Flash",
+			"name": "Flash",
+			"author": "Scirra",
+			"version": "r317.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "ljbbn2kkq45",
+	"objectTypes": {
+		"items": [
+			"enemeigo1",
+			"queenBee",
+			"title",
+			"instruction",
+			"curtain",
+			"credits",
+			"spawnpoint",
+			"Globals",
+			"furiaChipChip",
+			"Explosion",
+			"Sprite"
+		],
+		"subfolders": [
+			{
+				"items": [
+					"Audio",
+					"Keyboard"
+				],
+				"subfolders": [],
+				"name": "plugins"
+			},
+			{
+				"items": [
+					"bullet",
+					"chipChip",
+					"gun"
+				],
+				"subfolders": [],
+				"name": "player"
+			},
+			{
+				"items": [
+					"blueSky"
+				],
+				"subfolders": [],
+				"name": "Tilemaps"
+			}
+		]
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [
+			"Enemies"
+		],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Stage1",
+			"titleScreen",
+			"credits",
+			"darkStage"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"stage1",
+			"Player",
+			"Enemies",
+			"titleScreen",
+			"credits",
+			"everyTick",
+			"functions",
+			"darkStage"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [],
+			"subfolders": [
+				{
+					"items": [
+						{
+							"name": "pickup-gun.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 429635833998706,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "scream.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 203498594577046,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "taunt1.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 898482491991795,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "taunt2.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 578550120289977,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "taunt3.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 567252653201764,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "player"
+				},
+				{
+					"items": [
+						{
+							"name": "bee.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 597195182767413,
+							"file-info": {
+								"purpose": "none"
+							}
+						},
+						{
+							"name": "queen_death.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 853520699007822,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "enemies"
+				},
+				{
+					"items": [
+						{
+							"name": "shot.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 696874379570614,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "gun"
+				},
+				{
+					"items": [
+						{
+							"name": "complete.webm",
+							"type": "audio/webm; codecs=opus",
+							"sid": 564719516198981,
+							"file-info": {
+								"purpose": "none"
+							}
+						}
+					],
+					"subfolders": [],
+					"name": "stage"
+				}
+			]
+		},
+		"music": {
+			"items": [
+				{
+					"name": "stage.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 839808710557348,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "mainScreen.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 714313664103347,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "dukeNukem.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 985129019684443,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [
+				{
+					"name": "PressStart2P-Regular.ttf",
+					"type": "application/font-sfnt",
+					"sid": 843156313368227,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 210621872256060,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 809632242734894,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 975373268737290,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 166601314750230,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 600907704355552,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 409317889783535,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 435176293459558,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "Projeto de exemplo para aula de Construct 3",
+		"version": "1.0.0.0",
+		"author": "Diego M. Cezar",
+		"authorEmail": "diegocezar.dev@gmail.com",
+		"authorWebsite": "",
+		"appId": "com.darkspots.chipchipworld",
+		"pixelRounding": true,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-integer-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false,
+		"exportFileStructure": "folders"
+	},
+	"viewportWidth": 320,
+	"viewportHeight": 180,
+	"firstLayout": "titleScreen"
+}

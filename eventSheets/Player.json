@@ -1,0 +1,570 @@
+{
+	"name": "Player",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Movimentação",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 719265758604443,
+							"parameters": {
+								"key": 68
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "chipChip",
+							"sid": 803859080372731,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "right"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "chipChip",
+							"sid": 651492028979461,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "chipChip",
+							"sid": 242623454821598,
+							"parameters": {
+								"animation": "Globals.currPlayerAnimation",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 770045227730590
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 520675721789990,
+							"parameters": {
+								"key": 65
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "chipChip",
+							"sid": 572630076868317,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "left"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "chipChip",
+							"sid": 693954296033938,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "chipChip",
+							"sid": 799973726690733,
+							"parameters": {
+								"animation": "Globals.currPlayerAnimation",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 823825117193849
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 386448619655617,
+							"parameters": {
+								"key": 87
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "chipChip",
+							"sid": 917337166139230,
+							"behaviorType": "Platform",
+							"parameters": {
+								"control": "jump"
+							}
+						}
+					],
+					"sid": 846100918390971
+				},
+				{
+					"eventType": "comment",
+					"text": "Definindo animação de 'parado' e 'pulando'"
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-moving",
+							"objectClass": "chipChip",
+							"sid": 837694291669081,
+							"behaviorType": "Platform",
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-animation",
+							"objectClass": "chipChip",
+							"sid": 109481145315245
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "chipChip",
+							"sid": 624710340609280,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 249150482852878
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-jumping",
+							"objectClass": "chipChip",
+							"sid": 660131173991514,
+							"behaviorType": "Platform"
+						}
+					],
+					"actions": [
+						{
+							"id": "stop-animation",
+							"objectClass": "chipChip",
+							"sid": 814716126082158
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "chipChip",
+							"sid": 474429383645228,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 928925783204137
+				}
+			],
+			"sid": 155382655574752
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Tiro",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 871833296224545,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Globals",
+							"sid": 325656468689379,
+							"parameters": {
+								"instance-variable": "currPlayerAnimation",
+								"comparison": 0,
+								"value": "\"walk-armed\""
+							}
+						},
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 731164642877176,
+							"parameters": {
+								"interval-seconds": "0.1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "chipChip",
+							"sid": 898134660629667,
+							"parameters": {
+								"object": "bullet",
+								"layer": "0",
+								"image-point": "1",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 346245384293909,
+							"parameters": {
+								"audio-file": "shot",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 424031492831068,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-mirrored",
+									"objectClass": "chipChip",
+									"sid": 244249115677768
+								}
+							],
+							"actions": [
+								{
+									"id": "set-angle",
+									"objectClass": "bullet",
+									"sid": 171220997771630,
+									"parameters": {
+										"angle": "180"
+									}
+								}
+							],
+							"sid": 704945698519858
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-screen",
+							"objectClass": "bullet",
+							"sid": 843016307240541,
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bullet",
+							"sid": 636302210754969
+						}
+					],
+					"sid": 519121223243428
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "bullet",
+							"sid": 208016835676970,
+							"parameters": {
+								"object": "Enemies"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "bullet",
+							"sid": 919196075068961
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Enemies",
+							"sid": 964408399049521,
+							"parameters": {
+								"instance-variable": "vida",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Enemies",
+							"sid": 710682096845935,
+							"parameters": {
+								"color": "rgbEx(255, 0, 0)"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 632041261554161,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "Enemies",
+							"sid": 232742524809393,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
+							}
+						}
+					],
+					"sid": 522064678602224,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "Enemies",
+									"sid": 611292176166642,
+									"parameters": {
+										"instance-variable": "vida",
+										"comparison": 3,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "Globals",
+									"sid": 305563767441437,
+									"parameters": {
+										"instance-variable": "randomNumber",
+										"value": "int(random(0,6))"
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Enemies",
+									"sid": 926258571662920
+								},
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "Globals",
+									"sid": 605964899690810,
+									"parameters": {
+										"instance-variable": "nEnemies",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 739183619452614,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Globals",
+											"sid": 853827896018341,
+											"parameters": {
+												"instance-variable": "randomNumber",
+												"comparison": 0,
+												"value": "3"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 641186275014069,
+											"parameters": {
+												"audio-file": "taunt1",
+												"loop": "not-looping",
+												"volume": "-10",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Globals",
+											"sid": 156010809219392,
+											"parameters": {
+												"instance-variable": "randomNumber",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 619085802279462
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Globals",
+											"sid": 513936651067035,
+											"parameters": {
+												"instance-variable": "randomNumber",
+												"comparison": 0,
+												"value": "4"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 688665834063540,
+											"parameters": {
+												"audio-file": "taunt2",
+												"loop": "not-looping",
+												"volume": "-10",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Globals",
+											"sid": 226170275906224,
+											"parameters": {
+												"instance-variable": "randomNumber",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 609810159660799
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "Globals",
+											"sid": 560847919629915,
+											"parameters": {
+												"instance-variable": "currPlayerAnimation",
+												"comparison": 0,
+												"value": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "play",
+											"objectClass": "Audio",
+											"sid": 885272425610212,
+											"parameters": {
+												"audio-file": "taunt3",
+												"loop": "not-looping",
+												"volume": "-10",
+												"stereo-pan": "0",
+												"tag-optional": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "Globals",
+											"sid": 520412390143725,
+											"parameters": {
+												"instance-variable": "randomNumber",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 810269608523033
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 775492300590221
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Pick Ups",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "gun",
+							"sid": 237792421283511,
+							"parameters": {
+								"object": "chipChip"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 403985863420046,
+							"parameters": {
+								"audio-file": "pickup-gun",
+								"loop": "not-looping",
+								"volume": "-10",
+								"stereo-pan": "0",
+								"tag-optional": "\"pickup-gun\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "gun",
+							"sid": 496310888803654
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "chipChip",
+							"sid": 419973949870061,
+							"parameters": {
+								"animation": "\"walk-armed\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "Globals",
+							"sid": 645172723642748,
+							"parameters": {
+								"instance-variable": "currPlayerAnimation",
+								"value": "\"walk-armed\""
+							}
+						}
+					],
+					"sid": 916977616910198
+				}
+			],
+			"sid": 129139444241799
+		}
+	],
+	"sid": 796203404974942
+}

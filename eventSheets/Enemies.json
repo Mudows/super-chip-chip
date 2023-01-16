@@ -1,0 +1,272 @@
+{
+	"name": "Enemies",
+	"events": [
+		{
+			"eventType": "comment",
+			"text": "Lógica de colisão dos inimigos com o jogador, que o elimina e reinicia a fase como um todo."
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Enemies",
+					"sid": 522289834444693,
+					"parameters": {
+						"object": "chipChip"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "chipChip",
+					"sid": 575111965081270,
+					"parameters": {
+						"comparison": 5,
+						"y-co-ordinate": "LayoutHeight-10"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 476797981705753,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 993888855716618
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "death",
+							"sid": 306918679278237
+						}
+					],
+					"sid": 832986510209204
+				}
+			],
+			"isOrBlock": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "Globals",
+					"sid": 247146900715127,
+					"parameters": {
+						"instance-variable": "nEnemies",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-forward",
+					"objectClass": "queenBee",
+					"sid": 292941069262110,
+					"parameters": {
+						"distance": "queenBee.movSpeed"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 403800338666605,
+					"disabled": true,
+					"parameters": {
+						"audio-file": "bee",
+						"loop": "looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"bee\""
+					}
+				}
+			],
+			"sid": 993617118535163,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 684252448672852
+						}
+					],
+					"actions": [
+						{
+							"id": "shake",
+							"objectClass": "chipChip",
+							"sid": 390559567434498,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.4",
+								"mode": "reducing-magnitude"
+							}
+						}
+					],
+					"sid": 491322013000464
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "queenBee",
+					"sid": 313219322022662,
+					"parameters": {
+						"instance-variable": "vida",
+						"comparison": 0,
+						"value": "0"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 108628135221369
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "queenBee",
+					"sid": 828899506151028,
+					"disabled": true
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 117606184261061,
+					"parameters": {
+						"tag": "\"bee\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 920777932264551,
+					"disabled": true,
+					"parameters": {
+						"audio-file": "taunt3",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 861788024393058,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 287133636748674,
+					"parameters": {
+						"audio-file": "queen_death",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 409586573206998,
+					"parameters": {
+						"seconds": "3"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 103626523620873,
+					"parameters": {
+						"audio-file": "complete",
+						"loop": "not-looping",
+						"volume": "-10",
+						"stereo-pan": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-fade-out-time",
+					"objectClass": "curtain",
+					"sid": 920905831756950,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-out-time": "0"
+					}
+				},
+				{
+					"id": "set-fade-in-time",
+					"objectClass": "curtain",
+					"sid": 685159608227763,
+					"behaviorType": "Fade",
+					"parameters": {
+						"fade-in-time": "2"
+					}
+				},
+				{
+					"id": "restart-fade",
+					"objectClass": "curtain",
+					"sid": 340447848218362,
+					"behaviorType": "Fade"
+				},
+				{
+					"id": "fade-volume",
+					"objectClass": "Audio",
+					"sid": 702904774851560,
+					"parameters": {
+						"tag": "\"bgm-stage\"",
+						"db": "-100",
+						"duration": "3",
+						"ending": "stop"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 215257375894496,
+					"parameters": {
+						"seconds": "5"
+					}
+				},
+				{
+					"id": "reset-global-variables",
+					"objectClass": "System",
+					"sid": 165158017116177,
+					"disabled": true
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 807485303095588,
+					"disabled": true
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 242933861455667,
+					"parameters": {
+						"layout": "credits"
+					}
+				}
+			],
+			"sid": 502099573492777
+		}
+	],
+	"sid": 834310341247457
+}
